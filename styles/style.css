@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 150px;
+    gap: 100px;
+}
+
+footer {
+    align-self: end;
+}
+
+#logo {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    will-change: transform;
+    /* aide la fluidité */
+    -webkit-backface-visibility: hidden;
+    /* améliore le rendu sur certains Safari */
+    backface-visibility: hidden;
+    -webkit-animation: floaty 6s ease-in-out infinite;
+    animation: floaty 6s ease-in-out infinite;
+}
+
+/* keyframes standard */
+@keyframes floaty {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -18px, 0);
+    }
+
+    /* hauteur du flottement */
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* préfixe WebKit pour vieux Safari/anciennes versions iOS */
+@-webkit-keyframes floaty {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        -webkit-transform: translate3d(0, -18px, 0);
+        transform: translate3d(0, -18px, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
