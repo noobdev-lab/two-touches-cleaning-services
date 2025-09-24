@@ -6,6 +6,9 @@ body {
     box-sizing: border-box;
     padding: 150px;
     gap: 100px;
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
 }
 
 footer {
@@ -57,3 +60,4 @@ footer {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
+}
